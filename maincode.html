@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Zoop</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -19,16 +19,16 @@
             </div>
             <nav class="navigation">
                 <ul>
-                    <li><a href="#" class="underline-hover">Home</a></li>
-                    <li><a href="#" class="underline-hover">Products</a></li>
-                    <li><a href="#" class="underline-hover">Cart</a></li>
+                    <li><a href="index.html" class="underline-hover">Home</a></li>
+                    <li><a href="products.html" class="underline-hover">Products</a></li>
+                    <li><a href="cart.html" class="underline-hover">Cart</a></li>
                     <li class="you-container">
                         <button class="you-button">You<span class="arrow"></span></button>
                         <div class="tooltip">
                             <p class="welcome-text">Welcome</p>
                             <p class="extra-txt">To create an account</p>
                             <ul>
-                                <li><a href="#" class="login-signup">Login / Signup</a></li>
+                                <li><a href="signup.html" class="login-signup">Login / Signup</a></li>
                             </ul>
                         </div>
                     </li>
@@ -37,43 +37,51 @@
         </div>
     </header>
     <main>
+        <section class="slideshow">
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="img\fav2.png" alt="Groceries" class="imgclass">
+                </div>
+    
+                <div class="mySlides">
+                    <img src="img\fav1.png" alt="sale" class="imgclass">
+                </div>
+
+                <div class="mySlides">
+                    <img src="img\fav5.png" alt="christmas" class="imgclass">
+                </div>
+    
+                <!-- Add more slides as needed -->
+    
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <!-- Add dots for navigation if desired -->
+                </div>
+            </div>
+        </section>
         <section class="products">
             <div class="product">
-                <img src="product1.jpg" alt="Product 1">
-                <h2>Product 1</h2>
+                <img src="img\capsicum.jpg" alt="Product 1" class="vegeez">
+                <h2>capsicum (loose)</h2>
                 <p>$1.99</p>
                 <button>Add to Cart</button>
             </div>
             <div class="product">
-                <img src="product2.jpg" alt="Product 2">
-                <h2>Product 2</h2>
+                <img src="img/bettercarrots.jpg" alt="Product 2" class="vegeez">
+                <h2>carrots (loose)</h2>
                 <p>$2.99</p>
                 <button>Add to Cart</button>
             </div>
             <div class="product">
-                <img src="product3.jpg" alt="Product 3">
-                <h2>Product 3</h2>
+                <img src="img/onions.jpg" alt="Product 3" class="vegeez">
+                <h2>onions (loose)</h2>
                 <p>$3.99</p>
                 <button>Add to Cart</button>
             </div>
            
         </section>
-
-        <!--fix this
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="gigas2.jpg" alt="Pineapple" style="width:100%" class="specs">
-            </div>
-    
-            <div class="mySlides fade">
-                <img src="image2.jpg" style="width:100%">
-            </div>
-
-            <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-    -->
     </main>
     <footer>
         <p>&copy; Zoop 2023</p>
