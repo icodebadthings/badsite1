@@ -1,14 +1,12 @@
-//fix this too
 let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-    let i;
     const slides = document.getElementsByClassName("mySlides");
     const dots = document.getElementsByClassName("dot");
 
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
     }
 
     slideIndex++;
@@ -17,12 +15,24 @@ function showSlides() {
         slideIndex = 1;
     }
 
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
     }
 
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
 
-    setTimeout(showSlides, 5000);
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+// Logic for clicking on the dots to change slides
+const dotContainer = document.querySelector('.slideshow-container');
+dotContainer.addEventListener('click', function(event) {
+    if (event.target.classList.contains('dot')) {
+        const dots = Array.from(dotContainer.querySelectorAll('.dot'));
+        const dotIndex = dots.indexOf(event.target);
+        slideIndex = dotIndex + 1;
+        showSlides();
+    }
+});
+
