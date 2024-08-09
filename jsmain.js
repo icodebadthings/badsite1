@@ -22,10 +22,9 @@ function showSlides() {
     slides[slideIndex - 1].classList.add("active");
     dots[slideIndex - 1].classList.add("active");
 
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    setTimeout(showSlides, 2000);
 }
 
-// Logic for clicking on the dots to change slides
 const dotContainer = document.querySelector('.slideshow-container');
 dotContainer.addEventListener('click', function(event) {
     if (event.target.classList.contains('dot')) {
